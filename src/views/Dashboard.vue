@@ -244,7 +244,7 @@ export default {
         description: item.description,
         userId: 1,
       };
-      donedata.push(d);
+      this.donedata.push(d);
       let all = 0;
       let data_index = 0;
       let indexdata = this.tododata;
@@ -300,6 +300,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-</style>
