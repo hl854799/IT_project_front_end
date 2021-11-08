@@ -204,7 +204,7 @@
               </a-button>
               <br />
               Not registered yet?
-              <a href="/register"> Create an account </a>
+              <a @click = "register()"> Create an account </a>
             </a-form-item>
           </a-form>
         </div>
@@ -222,6 +222,10 @@ export default {
     this.form = this.$form.createForm(this, { name: "normal_login" });
   },
   methods: {
+    register(){
+      this.$router.push("/register")
+    },
+
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {
@@ -277,10 +281,11 @@ export default {
         }
       });
     },
+
   },
 };
 </script>
-<style>
+<style scoped>
 /* .logo1 {
   position: absolute;
   top: 200px;

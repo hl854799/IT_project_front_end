@@ -159,7 +159,7 @@
               </a-button>
               <br />
               Already have an account?
-              <a href="/login"> Sign in </a>
+              <a @click = "login()"> Sign in </a>
             </a-form-item>
           </a-form>
         </div>
@@ -204,6 +204,9 @@ export default {
     this.form = this.$form.createForm(this, { name: "register" });
   },
   methods: {
+    login(){
+      this.$router.push("/login")
+    },
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFieldsAndScroll((err, values) => {
@@ -253,7 +256,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .lo{
   background-color: rgb(232, 232, 232);
 }
