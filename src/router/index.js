@@ -58,33 +58,6 @@ const router = new VueRouter({
             },
           ],
         },
-        {
-          path: "/setting",
-          name: "Setting",
-          meta: { icon: "setting", title: "Setting", isLogin: true },
-          hideChildrenInMenu: true,
-          component: () => import("../views/Setting.vue"),
-          children: [
-            {
-              path: "/setting/account",
-              name: "Account Setting",
-              meta: { icon: "contacts", title: "AS", isLogin: true },
-              component: () => import("../views/AS.vue"),
-            },
-            {
-              path: "/setting/security",
-              name: "Security",
-              meta: { icon: "contacts", title: "Security", isLogin: true },
-              component: () => import("../views/Security.vue"),
-            },
-            {
-              path: "/setting/style",
-              name: "Style",
-              meta: { icon: "contacts", title: "Style", isLogin: true },
-              component: () => import("../views/Style.vue"),
-            },
-          ],
-        },
       ],
     },
 

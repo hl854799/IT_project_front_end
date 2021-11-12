@@ -1,5 +1,4 @@
 import { CONTACT } from "../mutation_types";
-import contacts from "../../api/contacts";
 import axios from "axios";
 
 const state = {
@@ -20,7 +19,8 @@ const actions = {
   },
   searchContact({ commit }, contactname) {
     //commit是调用mutations的
-    axios(`https://frozen-cove-48126.herokuapp.com/contact/findname/${contactname}`)
+    let userid = localStorage.getItem("userid")
+    axios(`https://frozen-cove-48126.herokuapp.com/contact/findname/${contactname}/${userid}`)
       .then((res) => {
         commit(CONTACT.GET_CONTACT, res.data);
       })

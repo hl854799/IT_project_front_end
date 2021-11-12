@@ -34,8 +34,8 @@
   </template>
 
   <a-icon type="logout" style=" fontSize: 250%; position: relative;
-  top: 700px;
-  left: 75px;" @click="logout"/>
+  top: 600px;
+  left: 85px;" @click="logout"/>
   
 
   </a-menu>

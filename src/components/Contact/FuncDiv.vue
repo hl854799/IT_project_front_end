@@ -36,7 +36,7 @@
             </a-button>
             </a-input>
         </a-auto-complete>
-        <a-dropdown :trigger="['click']" style="margin-left: 2050px">
+        <a-dropdown :trigger="['click']" style="margin-left: 1500px">
             <a class="ant-dropdown-link" @click="e => e.preventDefault()">
             <a-icon type="appstore" theme="filled" style="fontSize:50px"/>
             </a>
@@ -51,13 +51,7 @@
                 <a>Change Detail</a>
             </a-menu-item>
             <a-menu-divider />
-            <a-menu-item key="3" >
-                <a>Import Client</a>
-            </a-menu-item>
-            <a-menu-item key="4" >
-                <a :href="url.downloadUrl" download="contact.csv">Export Client</a>
-            </a-menu-item>
-            <a-menu-divider />  
+ 
             <a-menu-item key="5" @click="setModal4Visible(true);">
                 <a>Send Email</a>
             </a-menu-item>

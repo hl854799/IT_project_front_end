@@ -51,7 +51,7 @@ export default {
         );
         //发邮件
         this.$axios.post("https://frozen-cove-48126.herokuapp.com/user/sendEmail", {
-              address: ["garyhuang00@gmail.com"],
+              address: [localStorage.getItem("name")],
               subject: "remind",
               body: "Task " + this.closestTask.name + " is going to hold in 15 minutes",
               userAddress: "personalcrmofficial@gmail.com",
