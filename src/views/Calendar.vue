@@ -74,10 +74,10 @@ export default {
       };
     },
     getdata() {
-      this.$axios(`https://frozen-cove-48126.herokuapp.com/task/findAll`).then((res) => {
+      let userid = localStorage.getItem("userid")
+      this.$axios(`https://frozen-cove-48126.herokuapp.com/task/finduser/${userid}`).then((res) => {
         this.name_list = res.data;
         console.log(this.name_list[1]);
-        let n = 0;
 
         for (let index = 0; index < this.name_list.length; index++) {
           const element = this.name_list[index];
