@@ -271,6 +271,7 @@ export default {
                 this.$axios(`https://frozen-cove-48126.herokuapp.com/user/findid/${id}`).then(
                   (res) => {
                     localStorage.setItem("name", res.data.name);
+                    localStorage.setItem("email", res.data.email);
                   }
                 );
                 //iViewUi的友好提示

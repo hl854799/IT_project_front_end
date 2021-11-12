@@ -49,15 +49,14 @@ export default {
             values.userName,
             values.password
           );
-          let a = []
 
           this.$axios
             .post("https://frozen-cove-48126.herokuapp.com/user/sendEmail", {
               address: [values.recevier],
               subject: values.title,
               body: values.content,
-              userAddress: "854799323@qq.com",
-              userName: "LingHuang",
+              userAddress: localStorage.getItem("email"),
+              userName: localStorage.getItem("name"),
             })
             .then((data) => {
               console.log(data);
